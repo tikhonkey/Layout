@@ -1,5 +1,6 @@
-# Layout
+# Layouts
 
-Default template - layout.jpg
+Examples of my perfect pixel layouts
 
-Preview link: [https://tikhonkey.github.io/Layout/](https://tikhonkey.github.io/Layout/)
+1. Some shop layout (Frexy folder)
+2. Yandex.Atom layout (Atom folder)
