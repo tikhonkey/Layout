@@ -1,0 +1,535 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+
+    width: 956px;
+    min-height: 1060px;
+    margin: 19px auto;
+
+    position: relative;
+    border: 2px solid #000;
+
+    background-color: #7EC5F8;
+    box-shadow: 0 0 15px 25px rgba(0, 0, 0, 0.1);
+    transition: background .2s ease-out;
+}
+
+body:before {
+    position: absolute;
+    display: block;
+    content: '';
+    border: 19px solid #fff;
+    height: calc( 100% + 42px);
+    width: calc( 100% + 42px);
+    margin: -21px;
+}
+
+/* --- --- --- header styles --- --- --- */
+
+header {
+    display: block;
+    position: relative;
+    height: 553px;
+    width: 100%;
+    border-bottom: 2px solid #000;;
+}
+
+header .ya-logo {
+    position: absolute;
+    width: 138px;
+    height: 92px;
+    background: url('img/logo.png');
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50.5%);
+}
+
+header .header-slogan {
+    position: absolute;
+    width: 1023px;
+    height: 443px;
+    background: url('img/ya-bck.png');
+    top: 70px;
+    left: -44px;
+
+    padding: 300px 110px 0 120px;
+    font-size: 45px;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: -.013em;
+}
+
+.circle1, .circle2, .circle3, .circle4 {
+    position: absolute;
+    background: url('img/circle.png');
+    background-size: cover;
+}
+
+.circle1 {
+    height: 34px;
+    width: 34px;
+    bottom: -22px;
+    right: 356px;
+}
+
+.circle2 {
+    height: 60px;
+    width: 60px;
+    bottom: -42px;
+    right: 174px;
+}
+
+.circle3 {
+    height: 42px;
+    width: 42px;
+    bottom: -124px;
+    left: 172px;
+}
+
+.circle4 {
+    height: 34px;
+    width: 34px;
+    bottom: -276px;
+    left: 406px;
+}
+
+/* --- --- --- chapter styles --- --- --- */
+
+section article {
+    position: absolute;
+    width: 290px;
+}
+
+section article p {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.about, .people,.first-step, .second-step, .third-step, .people2 {
+    position: relative;
+}
+
+.curved-line1, .curved-line2, .curved-line3, .curved-line4,
+.video-button, .man1, .man2, .man3, .photo:before,
+.phone, .pen, .watch, .ticket, .note, .frame,
+.iphone, .ipad, .cup, .mask,
+.newspaper, .bag, .magazine {
+    position: absolute;
+}
+
+/* --- 1) about --- */
+
+.about {
+    height: 394px;
+    border-bottom: 2px solid #000;;
+    padding: 74px 400px 74px 93px;
+}
+
+.about p {
+    margin-bottom: 28px;
+}
+
+.video-button {
+    color: #000;
+    text-decoration: none;
+    right: 125px;
+    top: 80px;
+}
+
+.video-button:before {
+    display: block;
+    content: '';
+    width: 138px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all .2s ease-out;
+    background: url('img/arrow.png') no-repeat 53% center;
+}
+
+.video-button:hover:before {
+    background-color: rgba(255, 0, 0, 0.7);
+
+}
+
+/* --- 2) people --- */
+
+.people {
+    height: 490px;
+}
+
+.people input {
+    display: none;
+}
+
+.man1, .man2, .man3 {
+    width: 300px;
+    text-align: center;
+    top: 79px;
+    left: 91px;
+    padding-left: 2px;
+}
+
+.man2 {
+    left: 326px;
+}
+
+.man3 {
+    left: 560px;
+}
+
+.man3 {
+    padding-left: 0;
+}
+
+.photo {
+    display: block;
+    width: 139px;
+    height: 139px;
+    background: url('img/men-sprite.png') no-repeat;
+    margin: 0 auto 10px;
+}
+
+.people .photo{
+    cursor: pointer;
+}
+
+.people .photo:before {
+    display: block;
+    content: '';
+    border: 3px solid #000;
+    border-radius: 100%;
+    height: 155px;
+    width: 155px;
+    margin: -7px -9px;
+    opacity: 0;
+    transition: all .2s ease-out;
+}
+
+.man2 .photo {
+    background-position: -139px 0;
+}
+
+.man3 .photo {
+    background-position: -278px 0;
+}
+
+.man3 span {
+    display: block;
+    margin: -2px 0 0 12px;
+}
+
+.people p {
+    font-weight: bold;
+    transition: all .2s ease-out;
+}
+
+.people span {
+    cursor: default;
+    opacity: 0;
+    transition: all .2s ease-out;
+}
+
+#man1:checked ~ .man1 .photo:before,
+#man2:checked ~ .man2 .photo:before,
+#man3:checked ~ .man3 .photo:before,
+.people .photo:hover ~ span,
+.people .photo:hover:before {
+    opacity: 1;
+}
+
+#man1:checked ~ .man1 p,
+#man2:checked ~ .man2 p,
+#man3:checked ~ .man3 p,
+.people .photo:hover ~ p {
+    margin-bottom: 25px;
+}
+
+#man1:checked ~ .man1 .photo:before,
+#man2:checked ~ .man2 .photo:before,
+#man3:checked ~ .man3 .photo:before,
+.people .photo:hover:before {
+    border-color: #fff;
+}
+
+.curved-line1 {
+    width: 757px;
+    height: 53px;
+    background: url('img/curv-line-1.png');
+    bottom: 5px;
+    left: 95px;
+}
+
+/* --- 3) first step --- */
+
+.first-step {
+    height: 810px;
+}
+
+.first-step article {
+    top: 22px;
+    left: 88px;
+}
+
+.curved-line2 {
+    width: 596px;
+    height: 142px;
+    background: url('img/curv-line-2.png');
+    bottom: 14px;
+    left: 172px;
+}
+
+.phone {
+    width: 318px;
+    height: 425px;
+    background: url('img/phone.png');
+    top: 230px;
+    left: -22px;
+}
+
+.pen {
+    width: 48px;
+    height: 233px;
+    background: url('img/pen.png');
+    top: 271px;
+    left: 328px;
+}
+
+.ticket {
+    width: 454px;
+    height: 179px;
+    background: url('img/ticket.png');
+    top: 377px;
+    right: 92px;
+}
+
+.note {
+    width: 306px;
+    height: 434px;
+    background: url('img/notebook.png');
+    top: 19px;
+    right: 162px;
+}
+
+.watch {
+    width: 130px;
+    height: 247px;
+    background: url('img/watch.png');
+    bottom: 27px;
+    right: 338px;
+}
+
+.frame {
+    width: 227px;
+    height: 292px;
+    background: url('img/photo.png');
+    bottom: 27px;
+    right: -71px;
+}
+
+/* --- 4) second step --- */
+
+.second-step {
+    height: 695px;
+}
+
+.second-step article {
+    top: 15px;
+    right: 98px;
+}
+
+.iphone{
+    width: 148px;
+    height: 278px;
+    background: url('img/iphone.png');
+    bottom: 71px;
+    left: 44px;
+}
+
+.ipad {
+    width: 304px;
+    height: 453px;
+    background: url('img/ipad.png');
+    bottom: 220px;
+    left: 202px;
+}
+
+.cup {
+    width: 228px;
+    height: 303px;
+    background: url('img/cup.png');
+    bottom: 1px;
+    left: 328px;
+}
+
+.mask {
+    width: 390px;
+    height: 672px;
+    background: url('img/mask.png');
+    bottom: 1px;
+    right: 0;
+}
+
+/* --- 5) third step --- */
+
+.third-step {
+    height: 910px;
+}
+
+.third-step article {
+    width: 300px;
+    top: 116px;
+    left: 76px;
+}
+
+.curved-line3 {
+    width: 684px;
+    height: 91px;
+    background: url('img/curv-line-3.png');
+    top: -1px;
+    left: 94px;
+}
+
+.curved-line4 {
+    width: 626px;
+    height: 168px;
+    background: url('img/curv-line-4.png');
+    bottom: 20px;
+    left: 94px;
+}
+
+.newspaper {
+    width: 318px;
+    height: 484px;
+    background: url('img/newspaper.png');
+    bottom: 101px;
+    left: 91px;
+}
+
+.bag {
+    width: 475px;
+    height: 409px;
+    background: url('img/bag.png');
+    top: 53px;
+    right: 37px;
+}
+
+.magazine {
+    width: 306px;
+    height: 411px;
+    background: url('img/magazine.png');
+    bottom: 0;
+    right: -33px;
+}
+
+/* --- 6) people 2 --- */
+
+.people2 {
+    height: 305px;
+    border-bottom: 2px solid #000;
+}
+
+.people2 .man1, .people2 .man2, .people2 .man3 {
+    top: 60px;
+    margin-left: 1px;
+}
+
+.people2 p {
+    font-weight: bold;
+}
+
+/* --- --- --- footer styles --- --- --- */
+
+footer {
+    position: relative;
+    height: 435px;
+}
+
+footer article {
+    position: absolute;
+    width: 455px;
+    top: 78px;
+    left: 96px;
+}
+
+footer article p {
+    margin-bottom: 28px;
+}
+
+.footer-logo {
+    position: absolute;
+    width: 102px;
+    height: 102px;
+    background: url('img/footer-logo.png');
+    top: 83px;
+    right: 194px;
+}
+
+footer ul {
+    position: absolute;
+    list-style: none;
+    top: 272px;
+    left: 96px;
+}
+
+footer ul li {
+    float: left;
+}
+
+.socials {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 9px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAAAYBAMAAADni2k+AAAAFVBMVEW4uLj////09PTc3Nz6+vrHx8fr6+u4iZviAAABUElEQVQ4y92SzW6DMBCENxDnzBjCGYh6hya9Q3/upBU9h0bp+z9CZXaNkWwVqeqh6khIg+X52B/ol6Toz0odjz8PRyhmXyIPf6CndW2QWBtDQFFVVTWfGYQq9SCvToB5wqAI+ipnQMZVfBLRGdD9Kih6nlvborXwxw6XyY53RA0gb7UH8sSgwoJq6xvcaISdXVaHQapclhw3eHqwoAgXgZvqkEra3cck47j5/XJ/QC6gayMz+oDRDELee6BtQiWg6Zw4kAQ2LtpwYD+ncx/UqsluLGg3IndbQ8GHHGhd+sUHkYBCw1ZSkhphVNv0PCUD8VvzQVRqBnWGkxFr4niglIfdhEGdZv8KuJXA7N8DaV5/GQIdTnbaNLrOyBgfxKcxQqD5Xx5OPF/WjYKglPcbBh3YvosVhUHmxj0CoKXU20DfiEHIOqyB1rWDqFiC/pu+AIEWLc2c3rCrAAAAAElFTkSuQmCC');
+}
+
+.vkontakte {
+    background-position: -24px 0;
+}
+.tweetter {
+    background-position: -49px 0;
+}
+.youtube {
+    background-position: -73px 0;
+}
+.habr {
+    background-position: -96px 0;
+}
+.instagram {
+    background-position: -120px 0;
+}
+
+footer span {
+    position: absolute;
+    left: 373px;
+    bottom: 29px;
+    word-spacing: 2px;
+}
+
+footer nav {
+    position: absolute;
+    bottom: 29px;
+    left: 96px;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer nav a:nth-child(2) {
+    margin-left: 12px;
+}
