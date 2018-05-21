@@ -1,6 +1,6 @@
 # Layouts
 
-Examples of my perfect pixel layouts
+Examples of my layouts (pixel perfect style)
 
-1. Some shop layout (Frexy folder)
-2. Yandex.Atom layout (Atom folder)
+1. Some shop (Frexy folder)
+2. Yandex.Atom (Atom folder)
